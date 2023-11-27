@@ -1,5 +1,4 @@
 import React from 'react'
-import UserCard from './UserCard'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 
 
@@ -12,11 +11,7 @@ function SidePannel() {
 
         </div>
             
-            <UserCard />
-            <UserCard />
-            <UserCard />
-            <UserCard />
-            <UserCard />
+            
 
         </div>
   )

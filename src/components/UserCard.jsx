@@ -1,14 +1,21 @@
 import React from 'react'
 
-function UserCard() {
+
+const AVTRURL = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfVVuJ2VZiipnEGNBKO8TGT6-yBTiQR-vJsw&usqp=CAU'
+
+
+function UserCard(props) {
+
+
+
+
   return (
-    <div className='flex space-x-4 p-6 my-1 py-4 bg-red-300/10 rounded-md '>
-        <div className=' p-1 bg-gradient-to-br from-purple-500 to-yellow-500 rounded-full '>
-            <img className='rounded-full  h-14 w-14 object-cover object-top'  src='http://t2.gstatic.com/images?q=tbn:ANd9GcTKKakWSNAt-PcRjTgYOQIcvm6m_uhzy8rSb2oyxmqWjPhTsc7VoBpCL4dTVNQlGrN7HIFUtA' />
+    <div className=' '>
+        <div className=' p-1 max-w-max mx-auto bg-gradient-to-br from-purple-500 to-yellow-500 rounded-full '>
+            <img className='rounded-full  h-12 w-12 object-cover object-top'  src={props.img ? props.img : AVTRURL } />
         </div>
         <div>
-            <h1 className=' text-white font-bold text-xl '>Anmol</h1>
-            <p className=' text-lime-500'>@anmolraj_</p>
+            <p className='  text-sm text-center'>{props.name}</p>
         </div>
 
     </div>
@@ -16,3 +23,4 @@ function UserCard() {
 }
 
 export default UserCard
+

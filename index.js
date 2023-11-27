@@ -163,7 +163,7 @@ function Sum2N(sum, curr) {
 
 wholenewArr.reduce(Sum2N, 0);
 
-// Async Functions 
+// Async Functions
 
 // function A(){
 //   return 1
@@ -176,19 +176,14 @@ wholenewArr.reduce(Sum2N, 0);
 // A();
 
 async function Increment2() {
-  counter = await datafromapi ;
+  counter = await datafromapi;
   counter = counter + 1;
 }
-
 
 const Increment3 = async () => {
   let counter = 0;
   counter = counter + 1;
-}
-
-
-
-
+};
 
 // Objects :
 // Object values are written as key : value pairs (key and value separated by
@@ -205,92 +200,68 @@ let peopleArr = [
   },
 ];
 
+const EligibleVoters = peopleArr.filter((item) => item.age >= 22);
 
-const EligibleVoters = peopleArr.filter(item => item.age >= 22)
+// Spread Operator
 
-
-// Spread Operator 
-
-const address = { location : 'Banglore' ,country : 'India' }
+const address = { location: "Banglore", country: "India" };
 
 const TahirObj = {
   fullName: "Tahir",
   age: 23,
-  ...address
-}
+  ...address,
+};
 
 // Assignment 1 : Hint  : Map fn
 
+let number = 8;
 
-let number  = 8 ;
-
-let multiplier  = [1,2,3,4,5,6,7,8,9,10]
-
+let multiplier = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 let multiples = multiplier.map(function (element) {
   return element * number;
 });
 
-
 // Assignment 2 :  You have a certain amount in the bank and
 //  you have an array of payouts to complete . Using the reducer function
-//  find the remaining value in you bank account after eall the payouts have been processed 
+//  find the remaining value in you bank account after eall the payouts have been processed
 
+let bank = 5000;
 
-
-let bank = 5000 ;
-
-let payouts  = [150,200,75,99,1,30,260,80]
+let payouts = [150, 200, 75, 99, 1, 30, 260, 80];
 
 let rembalance = payouts.reduce(function (balance, payout) {
   return balance - payout;
 }, bank);
 
+const acc = (previousvalue, currentvalue, index, array) =>
+  0 - currentvalue + previousvalue;
+const balance = payouts.reduce(acc, bank);
 
-const acc = (previousvalue,currentvalue,index,array) => (0-currentvalue+previousvalue)
-const balance = payouts.reduce(acc,bank)
-
-// Methods in Objects 
+// Methods in Objects
 // const address = { location : 'Banglore' ,country : 'India' }
 const TahirObj2 = {
   fullName: "Tahir",
   age: 23,
-  ...address ,
-  greetings  : function (x){
-    
+  ...address,
+  greetings: function () {},
+  details: function () {
+    console.log(this.fullName);
   },
-  details: function(){
-    console.log(this.fullName)
-  }
-}
+};
 
 // Promises : A wrapper to a function
-// Pending : 
-// Fulfilled 
-// Rejected 
+// Pending :
+// Fulfilled
+// Rejected
 
-// new :  pre keyword for  Constructor () 
+// new :  pre keyword for  Constructor ()
 
-
-const amountPromise = new Promise(function(res ,rej){
-  //  does something 
-  if (number > 5 ){
-      res()
-  }else{
-    rej()
+const amountPromise = new Promise(function (res, rej) {
+  //  does something
+  if (number > 5) {
+    res();
+  } else {
+    rej();
   }
-}) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
